@@ -8,7 +8,10 @@ import org.osgi.util.tracker.ServiceTracker;
 import bookspublisher.service.BooksService;
 import bookspublisher.service.BooksServiceImpl;
 import dbpublisher.DBService;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class BooksActivator implements BundleActivator {
 
 	ServiceRegistration serviceRegistration;

@@ -4,7 +4,10 @@ import libararypublisher.LibraryService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class Activator implements BundleActivator {
 
 	ServiceReference serviceReference;

@@ -5,7 +5,10 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.util.tracker.ServiceTracker;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class LibraryActivator implements BundleActivator {
 
 	ServiceRegistration serviceRegistration;

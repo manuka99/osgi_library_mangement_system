@@ -28,6 +28,11 @@ import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
+/**
+ * @author Manuka yasas
+ *
+ */
+
 public class BooksForm extends JFrame {
 	static BooksForm frame;
 
@@ -71,13 +76,13 @@ public class BooksForm extends JFrame {
 		} else {
 			JOptionPane.showMessageDialog(null, "Please Start Database manager Service",
 					"DBPublisher Service Not Found", JOptionPane.OK_OPTION);
-
+			return;
 		}
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(200, 200, 600, 600);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
 		setContentPane(contentPane);
 
 		JLabel lblAddBooks = new JLabel("Add Books");
@@ -149,7 +154,6 @@ public class BooksForm extends JFrame {
 			}
 		});
 
-		JButton btnBack = new JButton("Back");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
@@ -185,8 +189,7 @@ public class BooksForm extends JFrame {
 						gl_contentPane.createSequentialGroup().addGap(161)
 								.addComponent(btnAddBooks, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
 								.addContainerGap(162, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap(359, Short.MAX_VALUE)
-						.addComponent(btnBack).addContainerGap()));
+				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap(359, Short.MAX_VALUE)));
 		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
 				.createSequentialGroup().addComponent(lblAddBooks).addGap(18)
 				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblBookID).addComponent(
@@ -205,8 +208,7 @@ public class BooksForm extends JFrame {
 				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblSubject).addComponent(
 						txtSubject, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 				.addGap(30).addComponent(btnAddBooks, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
-				.addPreferredGap(ComponentPlacement.RELATED).addComponent(btnBack)
-				.addContainerGap(53, Short.MAX_VALUE)));
+				.addPreferredGap(ComponentPlacement.RELATED)));
 		contentPane.setLayout(gl_contentPane);
 	}
 

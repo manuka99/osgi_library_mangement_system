@@ -1,5 +1,8 @@
 package bookspublisher.model;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class Book {
 
 	private int bookID;

@@ -6,6 +6,11 @@ import java.sql.PreparedStatement;
 import bookspublisher.model.Book;
 import dbpublisher.DBService;
 
+/**
+ * @author Manuka yasas
+ *
+ */
+
 public class BooksDao {
 	
 	private Connection con;

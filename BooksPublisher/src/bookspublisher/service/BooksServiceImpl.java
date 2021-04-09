@@ -5,7 +5,10 @@ import java.util.List;
 
 import bookspublisher.dao.BooksDao;
 import bookspublisher.model.Book;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class BooksServiceImpl implements BooksService{
 
 	private BooksDao booksDao;

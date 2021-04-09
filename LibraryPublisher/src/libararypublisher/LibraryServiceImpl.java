@@ -2,7 +2,10 @@ package libararypublisher;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class LibraryServiceImpl implements LibraryService {
 
 	LibraryMenuWindow menuWindow;

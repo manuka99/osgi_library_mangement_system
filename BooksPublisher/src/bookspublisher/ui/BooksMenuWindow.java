@@ -13,7 +13,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class BooksMenuWindow extends JFrame {
 	private static BooksMenuWindow frame;
 	private JPanel contentPane;
@@ -38,7 +41,7 @@ public class BooksMenuWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public BooksMenuWindow() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(200, 200, 600, 600);
 		setResizable(false);
 		setTitle("Books management");
