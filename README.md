@@ -1,5 +1,4 @@
-# osgi_library_mangement_system
-OsGi Library management system
+# OSGI Library Mangement System
 
 A very simple library management system created using Java :fallen_leaf:
 
