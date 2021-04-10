@@ -5,14 +5,12 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 /**
  * @author Manuka yasas
  *
@@ -36,98 +34,83 @@ public class BooksMenuWindow extends JFrame {
 			}
 		});
 	}
-	
+
 	/**
 	 * Create the frame.
 	 */
 	public BooksMenuWindow() {
+
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(200, 200, 600, 600);
+		setBounds(100, 100, 660, 420);
 		setResizable(false);
+		setLocationRelativeTo(null);
 		setTitle("Books management");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
+		contentPane.setLayout(null);
+
+		JLabel lbllibrary = new JLabel("BOOKS MANAGEMENT");
+		lbllibrary.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lbllibrary.setForeground(Color.GRAY);
+		lbllibrary.setBounds(200, 20, 400, 30);
+		contentPane.add(lbllibrary);
+
 		JButton btnNewButton = new JButton("New Book");
+		btnNewButton.setBounds(80, 80, 220, 60);
+		btnNewButton.setFocusable(true);
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			BooksForm.main(new String[]{});
-			frame.dispose();
+				BooksForm.main(new String[] {});
+				frame.dispose();
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		
+
 		JButton btnViewAllBooks = new JButton("All Books");
+		btnViewAllBooks.setBounds(340, 80, 220, 60);
+		btnViewAllBooks.setFocusable(true);
+		btnViewAllBooks.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnViewAllBooks);
 		btnViewAllBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-//				ViewBooks.main(new String[]{});
 				frame.dispose();
 			}
 		});
-		btnViewAllBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		
+
 		JButton btnViewUpdateBooks = new JButton("Update Books");
+		btnViewUpdateBooks.setBounds(80, 180, 220, 60);
+		btnViewUpdateBooks.setFocusable(true);
+		btnViewUpdateBooks.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnViewUpdateBooks);
 		btnViewUpdateBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-//				ViewBooks.main(new String[]{});
 				frame.dispose();
 			}
 		});
-		btnViewUpdateBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		
+
 		JButton btnDeleteBook = new JButton("Delete Book");
+		btnDeleteBook.setBounds(340, 180, 220, 60);
+		btnDeleteBook.setFocusable(true);
+		btnDeleteBook.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnDeleteBook);
 		btnDeleteBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				IssueBookForm.main(new String[]{});
 				frame.dispose();
 			}
 		});
-		btnDeleteBook.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		
+
 		JButton btnViewSearchBooks = new JButton("Search Books");
+		btnViewSearchBooks.setBounds(80, 280, 220, 60);
+		btnViewSearchBooks.setFocusable(true);
+		btnViewSearchBooks.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnViewSearchBooks);
 		btnViewSearchBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				ViewIssuedBooks.main(new String[]{});
 				frame.dispose();
 			}
 		});
-		btnViewSearchBooks.setFont(new Font("Tahoma", Font.PLAIN, 13));
 
-		
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap(81, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(132)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-//						.addComponent(btnLogout, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnViewSearchBooks, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnDeleteBook, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnViewUpdateBooks, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnViewAllBooks, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(101, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(btnViewAllBooks, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(btnViewUpdateBooks, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(btnDeleteBook, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(btnViewSearchBooks, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-//					.addComponent(btnLogout, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(16, Short.MAX_VALUE))
-		);
-		contentPane.setLayout(gl_contentPane);
 	}
 }

@@ -9,8 +9,8 @@ import bookspublisher.model.Book;
  */
 public interface BooksService {
 	public int storeBook(Book book);
-	public void updateBook(Book book);
-	public void deleteBook(String id);
+	public int updateBook(Book book);
+	public int deleteBook(int id);
 	public List<Book> listBooks();
-	public Book getBook(String id);
+	public Book getBook(int id);
 }

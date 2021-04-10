@@ -66,6 +66,7 @@ public class BooksForm extends JFrame {
 	 */
 	public BooksForm() {
 
+//		check database service active
 		if (BooksActivator.dbServiceChecker()) {
 			try {
 				booksService = new BooksServiceImpl(new DBServiceImpl().getConnection());
@@ -78,44 +79,89 @@ public class BooksForm extends JFrame {
 					"DBPublisher Service Not Found", JOptionPane.OK_OPTION);
 			return;
 		}
-
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(200, 200, 600, 600);
+		setBounds(100, 100, 660, 520);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setTitle("Add New Book");
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
-		JLabel lblAddBooks = new JLabel("Add Books");
-		lblAddBooks.setForeground(Color.GRAY);
-		lblAddBooks.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		JLabel lblAddNewBook = new JLabel("Add New Book");		
+		lblAddNewBook.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblAddNewBook.setForeground(Color.GRAY);
+		lblAddNewBook.setBounds(80, 20, 200, 40);;
+		contentPane.add(lblAddNewBook);
 
 		JLabel lblBookID = new JLabel("Book ID:");
+		lblBookID.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblBookID.setForeground(Color.GRAY);
+		lblBookID.setBounds(80, 80, 200, 60);
+		contentPane.add(lblBookID);
 
 		JLabel lblName = new JLabel("Name:");
+		lblName.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblName.setForeground(Color.GRAY);
+		lblName.setBounds(80, 140, 200, 60);
+		contentPane.add(lblName);
 
 		JLabel lblAuthor = new JLabel("Author:");
+		lblAuthor.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblAuthor.setForeground(Color.GRAY);
+		lblAuthor.setBounds(80, 200, 200, 60);
+		contentPane.add(lblAuthor);
 
 		JLabel lblPublishedDate = new JLabel("Published Date:");
+		lblPublishedDate.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPublishedDate.setForeground(Color.GRAY);
+		lblPublishedDate.setBounds(80, 260, 200, 60);
+		contentPane.add(lblPublishedDate);
 
 		JLabel lblSubject = new JLabel("Book Subject");
+		lblSubject.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSubject.setForeground(Color.GRAY);
+		lblSubject.setBounds(80, 320, 200, 60);
+		contentPane.add(lblSubject);
 
 		txtID = new JTextField();
 		txtID.setColumns(10);
+		txtID.setBounds(300, 90, 300, 40);
+		txtID.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtID);
 
 		txtName = new JTextField();
 		txtName.setColumns(10);
+		txtName.setBounds(300, 150, 300, 40);
+		txtName.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtName);
 
 		txtAuthor = new JTextField();
 		txtAuthor.setColumns(10);
+		txtAuthor.setBounds(300, 210, 300, 40);
+		txtAuthor.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtAuthor);
 
 		txtDate = new JTextField();
 		txtDate.setColumns(10);
+		txtDate.setBounds(300, 270, 300, 40);
+		txtDate.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtDate);
 
 		txtSubject = new JTextField();
 		txtSubject.setColumns(10);
+		txtSubject.setBounds(300, 330, 300, 40);
+		txtSubject.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtSubject);
 
-		JButton btnAddBooks = new JButton("Add Books");
-		btnAddBooks.addActionListener(new ActionListener() {
+		JButton btnAddBook = new JButton("Add Book");
+		btnAddBook.setBounds(80, 420, 200, 40);
+		btnAddBook.setFocusable(true);
+		btnAddBook.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnAddBook);
+		btnAddBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
@@ -153,63 +199,7 @@ public class BooksForm extends JFrame {
 				}
 			}
 		});
-
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(150).addComponent(lblAddBooks))
-								.addGroup(gl_contentPane
-										.createSequentialGroup().addGap(
-												18)
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-												.addComponent(lblName, GroupLayout.PREFERRED_SIZE, 37,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(lblBookID)
-												.addComponent(lblAuthor, GroupLayout.PREFERRED_SIZE, 37,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(lblPublishedDate, GroupLayout.DEFAULT_SIZE, 67,
-														Short.MAX_VALUE)
-												.addComponent(lblSubject, GroupLayout.PREFERRED_SIZE, 55,
-														GroupLayout.PREFERRED_SIZE))
-										.addGap(47)
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addComponent(txtSubject, GroupLayout.PREFERRED_SIZE, 167,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(txtDate, GroupLayout.PREFERRED_SIZE, 167,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(txtAuthor, GroupLayout.PREFERRED_SIZE, 167,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(txtName, GroupLayout.PREFERRED_SIZE, 167,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(txtID, GroupLayout.PREFERRED_SIZE, 167,
-														GroupLayout.PREFERRED_SIZE))))
-						.addContainerGap(125, Short.MAX_VALUE))
-				.addGroup(Alignment.LEADING,
-						gl_contentPane.createSequentialGroup().addGap(161)
-								.addComponent(btnAddBooks, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
-								.addContainerGap(162, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap(359, Short.MAX_VALUE)));
-		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
-				.createSequentialGroup().addComponent(lblAddBooks).addGap(18)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblBookID).addComponent(
-						txtID, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGap(18)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblName).addComponent(
-						txtName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGap(18)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblAuthor).addComponent(
-						txtAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGap(18)
-				.addGroup(gl_contentPane
-						.createParallelGroup(Alignment.BASELINE).addComponent(lblPublishedDate).addComponent(txtDate,
-								GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGap(18)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(lblSubject).addComponent(
-						txtSubject, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGap(30).addComponent(btnAddBooks, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
-				.addPreferredGap(ComponentPlacement.RELATED)));
-		contentPane.setLayout(gl_contentPane);
+		
 	}
 
 }
