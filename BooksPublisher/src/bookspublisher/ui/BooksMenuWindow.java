@@ -75,6 +75,7 @@ public class BooksMenuWindow extends JFrame {
 		contentPane.add(btnViewAllBooks);
 		btnViewAllBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ListBooks.main(new String[] {});
 				frame.dispose();
 			}
 		});
@@ -97,6 +98,7 @@ public class BooksMenuWindow extends JFrame {
 		contentPane.add(btnDeleteBook);
 		btnDeleteBook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DeleteBook.main(new String[] {});
 				frame.dispose();
 			}
 		});

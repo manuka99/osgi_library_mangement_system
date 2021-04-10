@@ -34,10 +34,9 @@ import javax.swing.LayoutStyle.ComponentPlacement;
  */
 
 public class BooksForm extends JFrame {
-	static BooksForm frame;
 
+	private static BooksForm frame;
 	private BooksService booksService;
-
 	private JPanel contentPane;
 	private JTextField txtID;
 	private JTextField txtName;
@@ -79,7 +78,7 @@ public class BooksForm extends JFrame {
 					"DBPublisher Service Not Found", JOptionPane.OK_OPTION);
 			return;
 		}
-		
+
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 660, 520);
 		setResizable(false);
@@ -90,10 +89,10 @@ public class BooksForm extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblAddNewBook = new JLabel("Add New Book");		
+		JLabel lblAddNewBook = new JLabel("Add New Book");
 		lblAddNewBook.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblAddNewBook.setForeground(Color.GRAY);
-		lblAddNewBook.setBounds(80, 20, 200, 40);;
+		lblAddNewBook.setBounds(80, 20, 200, 40);
 		contentPane.add(lblAddNewBook);
 
 		JLabel lblBookID = new JLabel("Book ID:");
@@ -193,13 +192,13 @@ public class BooksForm extends JFrame {
 					} else {
 						JOptionPane.showMessageDialog(BooksForm.this, "Sorry, unable to save!");
 					}
-				}else {
+				} else {
 					JOptionPane.showMessageDialog(null, "Please enter all the book details", "Invalid Book Details",
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
-		
+
 	}
 
 }

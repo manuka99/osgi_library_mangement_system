@@ -48,7 +48,7 @@ public class LibraryMenuWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lbllibrary = new JLabel("LIBRARY MANAGEMENT SYSTEM");
 		lbllibrary.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lbllibrary.setForeground(Color.GRAY);
@@ -74,7 +74,6 @@ public class LibraryMenuWindow extends JFrame {
 				}
 			}
 		});
-
 
 //		borrow books
 		JButton btnBorrowBooks = new JButton("Borrow Books");

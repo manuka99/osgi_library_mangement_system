@@ -61,7 +61,7 @@ public class BooksDao {
 	public int delete(int id) {
 		int status = 0;
 		try {
-			PreparedStatement ps = con.prepareStatement("delete from books where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from books where id = ?");
 			ps.setInt(1, id);
 			status = ps.executeUpdate();
 			con.close();
