@@ -8,6 +8,7 @@ import org.osgi.util.tracker.ServiceTracker;
 import bookspublisher.service.BooksService;
 import bookspublisher.service.BooksServiceImpl;
 import dbpublisher.DBService;
+
 /**
  * @author Manuka yasas
  *
@@ -21,25 +22,23 @@ public class BooksActivator implements BundleActivator {
 
 	public void start(BundleContext bundleContext) throws Exception {
 		System.out.println("Started books service");
-		
-		//get the db service
+
+		// get the db service
 //		dbServiceReference = bundleContext.getServiceReference(DBService.class.getName());
 //		DBService dbService1 = (DBService) bundleContext.getService(dbServiceReference);
-		
+
 		dbServiceTracker = new ServiceTracker(bundleContext, DBService.class.getName(), null);
-		dbServiceTracker.open();
-		dbService = (DBService) dbServiceTracker.getService();
-		
-		BooksService booksService = new BooksServiceImpl(dbService.getConnection());
+
+		BooksService booksService = new BooksServiceImpl();
 		serviceRegistration = bundleContext.registerService(BooksService.class.getName(), booksService, null);
-		
+
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {
 		System.out.println("Stop book service");
 		serviceRegistration.unregister();
 	}
-	
+
 	public static boolean dbServiceChecker() {
 		dbServiceTracker.open();
 
@@ -50,6 +49,5 @@ public class BooksActivator implements BundleActivator {
 		else
 			return false;
 	}
-	
 
 }

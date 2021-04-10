@@ -51,19 +51,7 @@ public class DeleteBook extends JFrame {
 	 */
 	public DeleteBook() {
 
-//		check database service active
-		if (BooksActivator.dbServiceChecker()) {
-			try {
-				booksService = new BooksServiceImpl(new DBServiceImpl().getConnection());
-			} catch (ClassNotFoundException | SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		} else {
-			JOptionPane.showMessageDialog(null, "Please Start Database manager Service",
-					"DBPublisher Service Not Found", JOptionPane.OK_OPTION);
-			return;
-		}
+		booksService = new BooksServiceImpl();
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 660, 320);
@@ -101,19 +89,26 @@ public class DeleteBook extends JFrame {
 
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String bid = txtBookID.getText();
-				if (bid == null || bid.trim().equals("")) {
-					JOptionPane.showMessageDialog(DeleteBook.this, "Enter a valid Book ID");
-				} else {
-					int id = Integer.parseInt(bid);
-					int i = booksService.deleteBook(id);
-					if (i > 0) {
-						JOptionPane.showMessageDialog(DeleteBook.this, "Record deleted successfully!");
-					} else {
-						JOptionPane.showMessageDialog(DeleteBook.this, "Unable to delete the given book");
+
+				try {
+					Integer.parseInt(txtBookID.getText());
+					if (!(Integer.parseInt(txtBookID.getText()) > 0)) {
+						throw new Exception();
 					}
-					frame.dispose();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Please enter a valid book ID", "Invalid BookID",
+							JOptionPane.ERROR_MESSAGE);
+					return;
 				}
+
+				int i = booksService.deleteBook(Integer.parseInt(txtBookID.getText()));
+				if (i > 0) {
+					JOptionPane.showMessageDialog(DeleteBook.this, "Record deleted successfully!");
+				} else {
+					JOptionPane.showMessageDialog(DeleteBook.this, "Unable to delete the given book");
+				}
+
 			}
 		});
 

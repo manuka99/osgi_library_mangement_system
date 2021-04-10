@@ -3,7 +3,7 @@ package bookspublisher.service;
 import java.sql.Connection;
 import java.util.List;
 
-import bookspublisher.dao.BooksDao;
+import bookspublisher.dao.BooksDaoImpl;
 import bookspublisher.model.Book;
 
 /**
@@ -12,10 +12,10 @@ import bookspublisher.model.Book;
  */
 public class BooksServiceImpl implements BooksService {
 
-	private BooksDao booksDao;
+	private BooksDaoImpl booksDao;
 
-	public BooksServiceImpl(Connection con) {
-		booksDao = new BooksDao(con);
+	public BooksServiceImpl() {
+		booksDao = new BooksDaoImpl();
 	}
 
 	@Override

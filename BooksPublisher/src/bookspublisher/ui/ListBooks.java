@@ -17,6 +17,7 @@ import bookspublisher.model.Book;
 import bookspublisher.service.BooksService;
 import bookspublisher.service.BooksServiceImpl;
 import dbpublisher.DBServiceImpl;
+
 /**
  * @author Manuka yasas
  *
@@ -46,19 +47,7 @@ public class ListBooks extends JFrame {
 	 */
 	public ListBooks() {
 
-//		check database service active
-		if (BooksActivator.dbServiceChecker()) {
-			try {
-				booksService = new BooksServiceImpl(new DBServiceImpl().getConnection());
-			} catch (ClassNotFoundException | SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		} else {
-			JOptionPane.showMessageDialog(null, "Please Start Database manager Service",
-					"DBPublisher Service Not Found", JOptionPane.OK_OPTION);
-			return;
-		}
+		booksService = new BooksServiceImpl();
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 660, 340);

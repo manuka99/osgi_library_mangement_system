@@ -87,6 +87,7 @@ public class BooksMenuWindow extends JFrame {
 		contentPane.add(btnViewUpdateBooks);
 		btnViewUpdateBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				UpdateBook.main(new String[] {});
 				frame.dispose();
 			}
 		});
