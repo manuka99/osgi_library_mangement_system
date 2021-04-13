@@ -106,7 +106,7 @@ public class UpdateBook extends JFrame {
 
 				book = booksService.getBook(Integer.parseInt(txtID.getText()));
 
-				lblBookDetails = new JLabel("Update Book details #" + book.getBookID());
+				lblBookDetails.setText("Update Book details #" + book.getBookID());
 
 				txtName.setText(book.getName());
 				txtAuthor.setText(book.getAuthor());

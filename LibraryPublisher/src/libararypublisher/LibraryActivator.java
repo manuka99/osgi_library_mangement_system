@@ -20,14 +20,14 @@ public class LibraryActivator implements BundleActivator {
 	public static BooksService booksService;
 
 	public void start(BundleContext bundleContext) throws Exception {
-		System.out.println("Started Displayer Service !!!");
+		System.out.println("Started Library Service !!!");
 		LibraryService displayService = new LibraryServiceImpl();
 		serviceRegistration = bundleContext.registerService(LibraryService.class.getName(), displayService, null);
 		booksServiceTracker = new ServiceTracker(bundleContext, BooksService.class.getName(), null);
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {
-		System.out.println("Stopped Displayer Service !!!");
+		System.out.println("Stopped Library Service !!!");
 		serviceRegistration.unregister();
 	}
 	
