@@ -49,7 +49,7 @@ public class LibraryMenuWindow extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lbllibrary = new JLabel("LIBRARY MANAGEMENT SYSTEM");
+		JLabel lbllibrary = new JLabel("CLEVERX LIBRARY MANAGER");
 		lbllibrary.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lbllibrary.setForeground(Color.GRAY);
 		lbllibrary.setBounds(160, 20, 400, 30);
