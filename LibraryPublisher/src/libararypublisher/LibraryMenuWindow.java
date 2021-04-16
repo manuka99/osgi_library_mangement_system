@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import memberpublisher.ui.MembersMenu;
 
 /**
  * @author Manuka yasas
@@ -24,6 +25,9 @@ public class LibraryMenuWindow extends JFrame {
 	private JPanel contentPane;
 
 	private static boolean BooksMenuClick = false;
+	private static boolean IssueBooksMenuClick = false;
+	private static boolean MembersMenuClick = false;
+	private static boolean StaffMenuClick = false;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -107,7 +111,15 @@ public class LibraryMenuWindow extends JFrame {
 		contentPane.add(btnMembers);
 		btnMembers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-
+//				MembersMenuClick = LibraryActivator.MembersTrackerChecker();
+//				if (MembersMenuClick == true) {
+//					MembersMenu obj = new MembersMenu();
+//					obj.setVisible(true);
+//					frame.dispose();
+//				} else {
+//					JOptionPane.showMessageDialog(null, "Please Start Library members Service",
+//							"Library members Service Not Found", JOptionPane.OK_OPTION);
+//				}
 			}
 		});
 

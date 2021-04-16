@@ -1,6 +1,7 @@
 package libararypublisher;
 
 import bookspublisher.service.BooksService;
+import memberpublisher.Service.MembersService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
@@ -15,15 +16,19 @@ public class LibraryActivator implements BundleActivator {
 	
 	//	trackers
 	public static ServiceTracker booksServiceTracker;
+//	public static ServiceTracker membersServiceTracker;
 
 	//Service
 	public static BooksService booksService;
+//	public static MembersService membersService;
 
 	public void start(BundleContext bundleContext) throws Exception {
 		System.out.println("Started Library Service !!!");
-		LibraryService displayService = new LibraryServiceImpl();
-		serviceRegistration = bundleContext.registerService(LibraryService.class.getName(), displayService, null);
+		LibraryService libraryService = new LibraryServiceImpl();
+		serviceRegistration = bundleContext.registerService(LibraryService.class.getName(), libraryService, null);
+		
 		booksServiceTracker = new ServiceTracker(bundleContext, BooksService.class.getName(), null);
+		//membersServiceTracker = new ServiceTracker(bundleContext, MembersService.class.getName(), null);
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {
@@ -39,5 +44,14 @@ public class LibraryActivator implements BundleActivator {
 		else
 			return false;
 	}
+	
+//	public static boolean MembersTrackerChecker() {
+//		membersServiceTracker.open();
+//		membersService = (MembersService) membersServiceTracker.getService();
+//		if (membersService != null)
+//			return true;
+//		else
+//			return false;
+//	}
 
 }
