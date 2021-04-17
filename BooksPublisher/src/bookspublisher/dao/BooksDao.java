@@ -3,7 +3,10 @@ package bookspublisher.dao;
 import java.util.List;
 
 import bookspublisher.model.Book;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public interface BooksDao {
 	public int save(Book book);
 

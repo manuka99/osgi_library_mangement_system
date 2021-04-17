@@ -24,7 +24,10 @@ import javax.swing.table.TableRowSorter;
 import bookspublisher.model.Book;
 import bookspublisher.service.BooksService;
 import bookspublisher.service.BooksServiceImpl;
-
+/**
+ * @author Manuka yasas
+ *
+ */
 public class SearchBooks extends JFrame {
 
 	private static SearchBooks frame;
