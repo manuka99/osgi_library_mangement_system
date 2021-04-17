@@ -1,14 +1,15 @@
-# OSGI Library Mangement System
+# CLEVERX Library Manager
 
-A very simple library management system created using Java :fallen_leaf:
+A simple yet powerful library management system developed using Java OSGI Micro Kernel Architecture. :fallen_leaf:
 
 #### Technologies
 
-1. Object oriented design.
-2. Simple graphical user interfaces developed using swing. :evergreen_tree:
-3. OSGI framework architecture.
-4. Mysql JDBC implementation.
-5. Using design paterns such as Singleton and Facades. :robot:
+1. OSGI Micro Kernel Architecture
+2. Service plugins were developed using interfaces, Abstraction, Inheritance, Polymorphism and other object oriented concepts in java.
+3. Separation of Data access logic (Crud operation) and Business logic in Service bundles.
+4. Simple graphical user interfaces developed using Java Swing. :evergreen_tree:
+5. Mysql JDBC implementation.
+6. Using design paterns such as Singleton and Facades. :robot:
 
 ### Installation
 
