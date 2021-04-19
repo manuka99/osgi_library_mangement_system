@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Library_Management_System_Issue_Books
+Bundle-SymbolicName: Library_Management_System_Issue_Books
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: issue_books.IssueBookActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-13
+Automatic-Module-Name: Library_Management_System_Issue_Books
+Import-Package: dbpublisher,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.2"
+Bundle-ActivationPolicy: lazy
