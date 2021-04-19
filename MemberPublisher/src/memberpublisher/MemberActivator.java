@@ -16,7 +16,7 @@ public class MemberActivator implements BundleActivator {
 	public static DBService dbService;
 
 	public void start(BundleContext bundleContext) throws Exception {
-		System.out.println("Started books service");
+		System.out.println("Started member service");
 
 		// get the db service
 //		dbServiceReference = bundleContext.getServiceReference(DBService.class.getName());
@@ -30,7 +30,7 @@ public class MemberActivator implements BundleActivator {
 	}
 
 	public void stop(BundleContext bundleContext) throws Exception {
-		System.out.println("Stop book service");
+		System.out.println("Stop member service");
 		serviceRegistration.unregister();
 	}
 
