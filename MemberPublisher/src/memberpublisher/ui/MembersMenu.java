@@ -42,6 +42,8 @@ public class MembersMenu extends JFrame {
 	
 	//Create the frame
 	public MembersMenu() {
+		
+		System.out.println("members");
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 660, 420);
@@ -88,7 +90,7 @@ public class MembersMenu extends JFrame {
 		contentPane.add(btnViewUpdateMembers);
 		btnViewUpdateMembers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				UpdateMember.main(new String[] {});
+				Updatemember.main(new String[] {});
 			}
 		});
 

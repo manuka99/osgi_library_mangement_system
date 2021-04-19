@@ -18,20 +18,17 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-
-import memberpublisher.MembersActivator;
 import memberpublisher.Model.Member;
 import memberpublisher.Service.MembersService;
 import memberpublisher.Service.MemberServiceImpl;
 import dbpublisher.DBServiceImpl;
-
 
 /**
  * @author Harini
  *
  */
 public class Updatemember extends JFrame {
-	
+
 	private static Updatemember frame;
 	private MembersService membersService;
 	private JPanel contentPane;
@@ -42,11 +39,9 @@ public class Updatemember extends JFrame {
 	private JTextField txtCity;
 	private JLabel lblMemberDetails;
 	private Member member;
-	
-	
-	
-	  //Launch the application.
-	 
+
+	// Launch the application.
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -59,9 +54,9 @@ public class Updatemember extends JFrame {
 			}
 		});
 	}
-	
-	//Create the frame
-	
+
+	// Create the frame
+
 	public Updatemember() {
 
 		membersService = new MemberServiceImpl();
@@ -149,10 +144,10 @@ public class Updatemember extends JFrame {
 		contentPane.add(lblRegDate);
 
 		JLabel lblCity = new JLabel("City: ");
-		lblCity .setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblCity .setForeground(Color.GRAY);
-		lblCity .setBounds(80, 460, 200, 60);
-		contentPane.add(lblCity );
+		lblCity.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblCity.setForeground(Color.GRAY);
+		lblCity.setBounds(80, 460, 200, 60);
+		contentPane.add(lblCity);
 
 		txtID = new JTextField();
 		txtID.setColumns(10);
@@ -179,17 +174,17 @@ public class Updatemember extends JFrame {
 		contentPane.add(txtDate);
 
 		txtCity = new JTextField();
-		txtCity .setColumns(10);
-		txtCity .setBounds(300, 470, 300, 40);
-		txtCity .setFont(new Font("Tahoma", Font.PLAIN, 16));
-		contentPane.add(txtCity );
+		txtCity.setColumns(10);
+		txtCity.setBounds(300, 470, 300, 40);
+		txtCity.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contentPane.add(txtCity);
 
 		JButton btnUpdateMember = new JButton("Update");
-		btnUpdateMember .setBounds(80, 560, 200, 40);
-		btnUpdateMember .setFocusable(true);
-		btnUpdateMember .setFont(new Font("Tahoma", Font.PLAIN, 18));
-		contentPane.add(btnUpdateMember );
-		btnUpdateMember .addActionListener(new ActionListener() {
+		btnUpdateMember.setBounds(80, 560, 200, 40);
+		btnUpdateMember.setFocusable(true);
+		btnUpdateMember.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnUpdateMember);
+		btnUpdateMember.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				if (!txtName.getText().isEmpty() && !txtTel.getText().isEmpty() && !txtDate.getText().isEmpty()

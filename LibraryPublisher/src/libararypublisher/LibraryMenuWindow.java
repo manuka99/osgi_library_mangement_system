@@ -111,15 +111,15 @@ public class LibraryMenuWindow extends JFrame {
 		contentPane.add(btnMembers);
 		btnMembers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-//				MembersMenuClick = LibraryActivator.MembersTrackerChecker();
-//				if (MembersMenuClick == true) {
-//					MembersMenu obj = new MembersMenu();
-//					obj.setVisible(true);
-//					frame.dispose();
-//				} else {
-//					JOptionPane.showMessageDialog(null, "Please Start Library members Service",
-//							"Library members Service Not Found", JOptionPane.OK_OPTION);
-//				}
+				MembersMenuClick = LibraryActivator.MembersTrackerChecker();
+				if (MembersMenuClick == true) {
+					MembersMenu obj = new MembersMenu();
+					obj.setVisible(true);
+					frame.dispose();
+				} else {
+					JOptionPane.showMessageDialog(null, "Please Start Library members Service",
+							"Library members Service Not Found", JOptionPane.OK_OPTION);
+				}
 			}
 		});
 

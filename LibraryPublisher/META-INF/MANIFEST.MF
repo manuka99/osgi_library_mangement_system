@@ -8,6 +8,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: DisplayPublisher
 Import-Package: bookspublisher.service,
  bookspublisher.ui,
+ memberpublisher.Service,
+ memberpublisher.ui,
  org.osgi.framework;version="1.3.0",
  org.osgi.util.tracker;version="1.5.2"
 Bundle-ActivationPolicy: lazy
