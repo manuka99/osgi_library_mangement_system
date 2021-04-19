@@ -2,6 +2,15 @@
 
 A simple yet powerful library management system developed using Java OSGI Micro Kernel Architecture. :fallen_leaf:
 
+#### Technologies
+
+1. OSGI Micro Kernel Architecture
+2. Service plugins were developed using interfaces, Abstraction, Inheritance, Polymorphism and other object oriented concepts in java.
+3. Separation of Data access logic (Crud operation) and Business logic in Service bundles.
+4. Simple graphical user interfaces developed using Java Swing. :evergreen_tree:
+5. Mysql JDBC implementation.
+6. Using design paterns such as Singleton and Facades. :robot:
+
 #### Introduction
 
 The CleverX Library Management System is a simple and a powerful software
@@ -31,17 +40,6 @@ Swing were used to develop simple and powerful user interfaces to enhance the us
 Below is the component diagram of the CleverX Library Manager.
 
 ![LibraryManagementArchetecture](https://user-images.githubusercontent.com/63389716/115281593-d065ca00-a166-11eb-8f04-5cddbd5f6d91.png)
-
-
-
-#### Technologies
-
-1. OSGI Micro Kernel Architecture
-2. Service plugins were developed using interfaces, Abstraction, Inheritance, Polymorphism and other object oriented concepts in java.
-3. Separation of Data access logic (Crud operation) and Business logic in Service bundles.
-4. Simple graphical user interfaces developed using Java Swing. :evergreen_tree:
-5. Mysql JDBC implementation.
-6. Using design paterns such as Singleton and Facades. :robot:
 
 ### Installation
 
