@@ -30,7 +30,6 @@ Swing were used to develop simple and powerful user interfaces to enhance the us
 <br/><br/>
 Below is the component diagram of the CleverX Library Manager.
 
-<br/>
 ![LibraryManagementArchetecture](https://user-images.githubusercontent.com/63389716/115281593-d065ca00-a166-11eb-8f04-5cddbd5f6d91.png)
 
 
