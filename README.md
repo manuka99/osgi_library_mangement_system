@@ -2,6 +2,39 @@
 
 A simple yet powerful library management system developed using Java OSGI Micro Kernel Architecture. :fallen_leaf:
 
+#### Introduction
+
+The CleverX Library Management System is a simple and a powerful software
+solution that provides a set of functionalities to manage all necessary tasks related
+to a library. Services such as registering staff as well as members, saving and
+updating books information, monitoring books issued, assisting staff members to
+track overdue books and much more made easy with CleverX Library Manager.
+The CleverX Library Manager was developed using Java Swing enhancing user
+interfaces and experience. All data and information are saved to a relational
+database(MYSQL) thereby data loss is completely prevented.
+
+#### Description
+
+The software architecture of the CleverX Library Manager consist of eight components
+developed using OSGI Micro Kernel Architecture deployed using Eclipse Equinox. System
+consist of four publishers to manage Books, Members, Staff and Issue Books. The library
+publisher (Core system) will consume all the above four publishers and the Library consumer
+(Service consumer) will consume the library publisher. The relational database publisher
+(DBpublisher) will be used by all the four main service plugin modules and then the
+com.mysql.jdbc service will be consumed by the DBPublisher in order to connect to mysql-jdbc.
+Design patterns such as singleton and facades are used to perform complex functionalities which
+hides the chained implementation from the user. Four main service plugins were developed using
+interfaces, Abstraction, Inheritance, Polymorphism and other object oriented concepts in java.
+Separation of Data access logic (Crud operation) and Business logic in individual bundles. Java
+Swing were used to develop simple and powerful user interfaces to enhance the user experience.
+<br/><br/>
+Below is the component diagram of the CleverX Library Manager.
+
+<br/>
+![LibraryManagementArchetecture](https://user-images.githubusercontent.com/63389716/115281593-d065ca00-a166-11eb-8f04-5cddbd5f6d91.png)
+
+
+
 #### Technologies
 
 1. OSGI Micro Kernel Architecture
