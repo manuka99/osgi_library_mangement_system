@@ -1,6 +1,7 @@
 package libararypublisher;
 
 import bookspublisher.service.BooksService;
+import memberpublisher.Service.MembersService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
